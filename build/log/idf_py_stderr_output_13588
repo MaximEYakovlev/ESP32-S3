@@ -1,0 +1,67 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40375b46: panic_abort at /home/maxim/esp/esp-idf/components/esp_system/panic.c:463
+0x4037c4e5: esp_system_abort at /home/maxim/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384811: __assert_func at /home/maxim/esp/esp-idf/components/newlib/assert.c:80
+0x4037d27a: spinlock_acquire at /home/maxim/esp/esp-idf/components/esp_hw_support/include/spinlock.h:140 (discriminator 1)
+ (inlined by) xPortEnterCriticalTimeout at /home/maxim/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:474 (discriminator 1)
+0x4037ce20: vPortEnterCritical at /home/maxim/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:567
+ (inlined by) xQueueSemaphoreTake at /home/maxim/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:1727
+0x4200af6d: example_wifi_sta_do_connect at /home/maxim/esp/esp-idf/examples/common_components/protocol_examples_common/wifi_connect.c:169
+0x4200b187: example_wifi_connect at /home/maxim/esp/esp-idf/examples/common_components/protocol_examples_common/wifi_connect.c:242
+0x4200a9eb: example_connect at /home/maxim/esp/esp-idf/examples/common_components/protocol_examples_common/connect.c:99
+0x4200a7f1: app_main at /home/maxim/http_request/main/http_request_example_main.c:133
+0x42084e73: main_task at /home/maxim/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037cff1: vPortTaskWrapper at /home/maxim/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40375a80: esp_restart_noos at /home/maxim/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m0x40375b46: panic_abort at /home/maxim/esp/esp-idf/components/esp_system/panic.c:463
+0x4037c4e5: esp_system_abort at /home/maxim/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384811: __assert_func at /home/maxim/esp/esp-idf/components/newlib/assert.c:80
+0x4037d27a: spinlock_acquire at /home/maxim/esp/esp-idf/components/esp_hw_support/include/spinlock.h:140 (discriminator 1)
+ (inlined by) xPortEnterCriticalTimeout at /home/maxim/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:474 (discriminator 1)
+0x4037ce20: vPortEnterCritical at /home/maxim/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:567
+ (inlined by) xQueueSemaphoreTake at /home/maxim/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:1727
+0x4200af6d: example_wifi_sta_do_connect at /home/maxim/esp/esp-idf/examples/common_components/protocol_examples_common/wifi_connect.c:169
+0x4200b187: example_wifi_connect at /home/maxim/esp/esp-idf/examples/common_components/protocol_examples_common/wifi_connect.c:242
+0x4200a9eb: example_connect at /home/maxim/esp/esp-idf/examples/common_components/protocol_examples_common/connect.c:99
+0x4200a7f1: app_main at /home/maxim/http_request/main/http_request_example_main.c:133
+0x42084e73: main_task at /home/maxim/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037cff1: vPortTaskWrapper at /home/maxim/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40375a80: esp_restart_noos at /home/maxim/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m0x40375b46: panic_abort at /home/maxim/esp/esp-idf/components/esp_system/panic.c:463
+0x4037c4e5: esp_system_abort at /home/maxim/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384811: __assert_func at /home/maxim/esp/esp-idf/components/newlib/assert.c:80
+0x4037d27a: spinlock_acquire at /home/maxim/esp/esp-idf/components/esp_hw_support/include/spinlock.h:140 (discriminator 1)
+ (inlined by) xPortEnterCriticalTimeout at /home/maxim/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:474 (discriminator 1)
+0x4037ce20: vPortEnterCritical at /home/maxim/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:567
+ (inlined by) xQueueSemaphoreTake at /home/maxim/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:1727
+0x4200af6d: example_wifi_sta_do_connect at /home/maxim/esp/esp-idf/examples/common_components/protocol_examples_common/wifi_connect.c:169
+0x4200b187: example_wifi_connect at /home/maxim/esp/esp-idf/examples/common_components/protocol_examples_common/wifi_connect.c:242
+0x4200a9eb: example_connect at /home/maxim/esp/esp-idf/examples/common_components/protocol_examples_common/connect.c:99
+0x4200a7f1: app_main at /home/maxim/http_request/main/http_request_example_main.c:133
+0x42084e73: main_task at /home/maxim/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037cff1: vPortTaskWrapper at /home/maxim/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40375a80: esp_restart_noos at /home/maxim/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m0x40375b46: panic_abort at /home/maxim/esp/esp-idf/components/esp_system/panic.c:463
+0x4037c4e5: esp_system_abort at /home/maxim/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384811: __assert_func at /home/maxim/esp/esp-idf/components/newlib/assert.c:80
+0x4037d27a: spinlock_acquire at /home/maxim/esp/esp-idf/components/esp_hw_support/include/spinlock.h:140 (discriminator 1)
+ (inlined by) xPortEnterCriticalTimeout at /home/maxim/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:474 (discriminator 1)
+0x4037ce20: vPortEnterCritical at /home/maxim/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:567
+ (inlined by) xQueueSemaphoreTake at /home/maxim/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:1727
+0x4200af6d: example_wifi_sta_do_connect at /home/maxim/esp/esp-idf/examples/common_components/protocol_examples_common/wifi_connect.c:169
+0x4200b187: example_wifi_connect at /home/maxim/esp/esp-idf/examples/common_components/protocol_examples_common/wifi_connect.c:242
+0x4200a9eb: example_connect at /home/maxim/esp/esp-idf/examples/common_components/protocol_examples_common/connect.c:99
+0x4200a7f1: app_main at /home/maxim/http_request/main/http_request_example_main.c:133
+0x42084e73: main_task at /home/maxim/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037cff1: vPortTaskWrapper at /home/maxim/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40375a80: esp_restart_noos at /home/maxim/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0m
