@@ -1,0 +1,1435 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x2b (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2db0
+entry 0x403c8914
+[0;32mI (27) boot: ESP-IDF v5.3.1 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Sep 14 2024 21:35:25[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (39) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=213f0h (136176) map[0m
+[0;32mI (124) esp_image: segment 1: paddr=00031418 vaddr=3fc99400 size=04978h ( 18808) load[0m
+[0;32mI (128) esp_image: segment 2: paddr=00035d98 vaddr=40374000 size=0a280h ( 41600) load[0m
+[0;32mI (139) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=85d6ch (548204) map[0m
+[0;32mI (237) esp_image: segment 4: paddr=000c5d94 vaddr=4037e280 size=0b120h ( 45344) load[0m
+[0;32mI (256) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (256) boot: Disabling RNG early entropy source...[0m
+[0;32mI (268) cpu_start: Multicore app[0m
+[0;32mI (278) cpu_start: Pro cpu start user code[0m
+[0;32mI (278) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (278) app_init: Application information:[0m
+[0;32mI (281) app_init: Project name:     http_request[0m
+[0;32mI (286) app_init: App version:      bb0feef-dirty[0m
+[0;32mI (291) app_init: Compile time:     Sep 15 2024 14:01:57[0m
+[0;32mI (297) app_init: ELF file SHA256:  33a0dd1ea...[0m
+[0;32mI (303) app_init: ESP-IDF:          v5.3.1[0m
+[0;32mI (307) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (312) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (317) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (322) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (329) heap_init: At 3FCA1E60 len 000478B0 (286 KiB): RAM[0m
+[0;32mI (335) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (341) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (347) heap_init: At 600FE100 len 00001EE8 (7 KiB): RTCRAM[0m
+[0;32mI (355) spi_flash: detected chip: generic[0m
+[0;32mI (358) spi_flash: flash io: dio[0m
+[0;33mW (362) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (376) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (382) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (390) main_task: Started on CPU0[0m
+[0;32mI (410) main_task: Calling app_main()[0m
+[0;32mI (430) example_connect: Start example_connect.[0m
+[0;32mI (430) pp: pp rom version: e7ae62f[0m
+[0;32mI (430) net80211: net80211 rom version: e7ae62f[0m
+I (440) wifi:wifi driver task: 3fcabd7c, prio:23, stack:6656, core=0
+I (450) wifi:wifi firmware version: ccaebfa
+I (450) wifi:wifi certification version: v7.0
+I (450) wifi:config NVS flash: enabled
+I (450) wifi:config nano formating: disabled
+I (450) wifi:Init data frame dynamic rx buffer num: 32
+I (460) wifi:Init static rx mgmt buffer num: 5
+I (460) wifi:Init management short buffer num: 32
+I (470) wifi:Init dynamic tx buffer num: 32
+I (470) wifi:Init static tx FG buffer num: 2
+I (470) wifi:Init static rx buffer size: 1600
+I (480) wifi:Init static rx buffer num: 10
+I (480) wifi:Init dynamic rx buffer num: 32
+[0;32mI (490) wifi_init: rx ba win: 6[0m
+[0;32mI (490) wifi_init: accept mbox: 6[0m
+[0;32mI (490) wifi_init: tcpip mbox: 32[0m
+[0;32mI (500) wifi_init: udp mbox: 6[0m
+[0;32mI (500) wifi_init: tcp mbox: 6[0m
+[0;32mI (500) wifi_init: tcp tx win: 5760[0m
+[0;32mI (510) wifi_init: tcp rx win: 5760[0m
+[0;32mI (510) wifi_init: tcp mss: 1440[0m
+[0;32mI (520) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (520) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (530) phy_init: phy_version 680,a6008b2,Jun  4 2024,16:41:10[0m
+[0;33mW (570) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+I (640) wifi:mode : sta (48:ca:43:26:2d:24)
+I (640) wifi:enable tsf
+[0;32mI (640) example_connect: Connecting to shameless...[0m
+W (640) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2
+[0;32mI (650) example_connect: Waiting for IP(s)[0m
+I (3530) wifi:new:<5,1>, old:<1,0>, ap:<255,255>, sta:<5,1>, prof:1, snd_ch_cfg:0x0
+I (3530) wifi:state: init -> auth (0xb0)
+I (3540) wifi:state: auth -> assoc (0x0)
+I (3540) wifi:state: assoc -> run (0x10)
+I (3560) wifi:connected with shameless, aid = 3, channel 5, 40U, bssid = 20:e5:2a:e4:8d:c6
+I (3560) wifi:security: WPA2-PSK, phy: bgn, rssi: -39
+I (3560) wifi:pm start, type: 1
+
+I (3560) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (3570) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+I (3590) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (5430) example_connect: Got IPv6 event: Interface "example_netif_sta" address: fe80:0000:0000:0000:4aca:43ff:fe26:2d24, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (6080) esp_netif_handlers: example_netif_sta ip: 192.168.1.4, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (6080) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.168.1.4[0m
+[0;32mI (6080) example_common: Connected to example_netif_sta[0m
+[0;32mI (6090) example_common: - IPv4 address: 192.168.1.4,[0m
+[0;32mI (6100) example_common: - IPv6 address: fe80:0000:0000:0000:4aca:43ff:fe26:2d24, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (6110) main_task: Returned from app_main()[0m
+I (6110) wifi:<ba-add>idx:0 (ifx:0, 20:e5:2a:e4:8d:c6), tid:0, ssn:6, winSize:64
+[0;32mI (6130) example: DNS lookup succeeded. IP=93.184.215.14[0m
+[0;32mI (6130) example: ... allocated socket[0m
+I (6360) wifi:<ba-add>idx:1 (ifx:0, 20:e5:2a:e4:8d:c6), tid:1, ssn:0, winSize:64
+[0;32mI (6360) example: ... connected[0m
+[0;32mI (6370) example: ... socket send success[0m
+[0;32mI (6370) example: ... set socket receiving timeout success[0m
+HTTP/1.0 200 OK
+Age: 435800
+Cache-Control: max-age=604800
+Content-Type: text/html; charset=UTF-8
+Date: Sun, 15 Sep 2024 11:02:43 GMT
+Etag: "3147526947+ident"
+Expires: Sun, 22 Sep 2024 11:02:43 GMT
+Last-Modified: Thu, 17 Oct 2019 07:18:26 GMT
+Server: ECAcc (dcd/7D34)
+Vary: Accept-Encoding
+X-Cache: HIT
+Content-Length: 1256
+Connection: close
+
+<!doctype html>
+<html>
+<head>
+    <title>Example Domain</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+    body {
+        background-color: #f0f0f2;
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        
+    }
+    div {
+        width: 600px;
+        margin: 5em auto;
+        padding: 2em;
+        background-color: #fdfdff;
+        border-radius: 0.5em;
+        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
+    }
+    a:link, a:visited {
+        color: #38488f;
+        text-decoration: none;
+    }
+    @media (max-width: 700px) {
+        div {
+            margin: 0 auto;
+            width: auto;
+        }
+    }
+    </style>    
+</head>
+
+<body>
+<div>
+    <h1>Example Domain</h1>
+    <p>This domain is for use in illustrative examples in documents. You may use this
+    domain in literature without prior coordination or asking for permission.</p>
+    <p><a href="https://www.iana.org/domains/example">More information...</a></p>
+</div>
+</body>
+</html>
+[0;32mI (6710) example: ... done reading from socket. Last read return=0 errno=128.[0m
+[0;32mI (6720) example: 10... [0m
+[0;32mI (7720) example: 9... [0m
+[0;32mI (8720) example: 8... [0m
+[0;32mI (9720) example: 7... [0m
+[0;32mI (10720) example: 6... [0m
+[0;32mI (11720) example: 5... [0m
+[0;32mI (12720) example: 4... [0m
+[0;32mI (13720) example: 3... [0m
+[0;32mI (14720) example: 2... [0m
+[0;32mI (15720) example: 1... [0m
+[0;32mI (16720) example: 0... [0m
+[0;32mI (17720) example: Starting again![0m
+[0;32mI (17720) example: DNS lookup succeeded. IP=93.184.215.14[0m
+[0;32mI (17720) example: ... allocated socket[0m
+[0;32mI (17930) example: ... connected[0m
+[0;32mI (17940) example: ... socket send success[0m
+[0;32mI (17940) example: ... set socket receiving timeout success[0m
+HTTP/1.0 200 OK
+Accept-Ranges: bytes
+Age: 230661
+Cache-Control: max-age=604800
+Content-Type: text/html; charset=UTF-8
+Date: Sun, 15 Sep 2024 11:02:55 GMT
+Etag: "3147526947+gzip"
+Expires: Sun, 22 Sep 2024 11:02:55 GMT
+Last-Modified: Thu, 17 Oct 2019 07:18:26 GMT
+Server: ECAcc (dcd/7D69)
+Vary: Accept-Encoding
+X-Cache: HIT
+Content-Length: 1256
+Connection: close
+
+<!doctype html>
+<html>
+<head>
+    <title>Example Domain</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+    body {
+        background-color: #f0f0f2;
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        
+    }
+    div {
+        width: 600px;
+        margin: 5em auto;
+        padding: 2em;
+        background-color: #fdfdff;
+        border-radius: 0.5em;
+        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
+    }
+    a:link, a:visited {
+        color: #38488f;
+        text-decoration: none;
+    }
+    @media (max-width: 700px) {
+        div {
+            margin: 0 auto;
+            width: auto;
+        }
+    }
+    </style>    
+</head>
+
+<body>
+<div>
+    <h1>Example Domain</h1>
+    <p>This domain is for use in illustrative examples in documents. You may use this
+    domain in literature without prior coordination or asking for permission.</p>
+    <p><a href="https://www.iana.org/domains/example">More information...</a></p>
+</div>
+</body>
+</html>
+[0;32mI (18280) example: ... done reading from socket. Last read return=0 errno=128.[0m
+[0;32mI (18290) example: 10... [0m
+[0;32mI (19290) example: 9... [0m
+[0;32mI (20290) example: 8... [0m
+[0;32mI (21290) example: 7... [0m
+[0;32mI (22290) example: 6... [0m
+[0;32mI (23290) example: 5... [0m
+[0;32mI (24290) example: 4... [0m
+[0;32mI (25290) example: 3... [0m
+[0;32mI (26290) example: 2... [0m
+[0;32mI (27290) example: 1... [0m
+[0;32mI (28290) example: 0... [0m
+[0;32mI (29290) example: Starting again![0m
+[0;32mI (29290) example: DNS lookup succeeded. IP=93.184.215.14[0m
+[0;32mI (29290) example: ... allocated socket[0m
+[0;32mI (29510) example: ... connected[0m
+[0;32mI (29510) example: ... socket send success[0m
+[0;32mI (29510) example: ... set socket receiving timeout success[0m
+HTTP/1.0 200 OK
+Accept-Ranges: bytes
+Age: 277864
+Cache-Control: max-age=604800
+Content-Type: text/html; charset=UTF-8
+Date: Sun, 15 Sep 2024 11:03:07 GMT
+Etag: "3147526947"
+Expires: Sun, 22 Sep 2024 11:03:07 GMT
+Last-Modified: Thu, 17 Oct 2019 07:18:26 GMT
+Server: ECAcc (dcd/7D80)
+Vary: Accept-Encoding
+X-Cache: HIT
+Content-Length: 1256
+Connection: close
+
+<!doctype html>
+<html>
+<head>
+    <title>Example Domain</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+    body {
+        background-color: #f0f0f2;
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        
+    }
+    div {
+        width: 600px;
+        margin: 5em auto;
+        padding: 2em;
+        background-color: #fdfdff;
+        border-radius: 0.5em;
+        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
+    }
+    a:link, a:visited {
+        color: #38488f;
+        text-decoration: none;
+    }
+    @media (max-width: 700px) {
+        div {
+            margin: 0 auto;
+            width: auto;
+        }
+    }
+    </style>    
+</head>
+
+<body>
+<div>
+    <h1>Example Domain</h1>
+    <p>This domain is for use in illustrative examples in documents. You may use this
+    domain in literature without prior coordination or asking for permission.</p>
+    <p><a href="https://www.iana.org/domains/example">More information...</a></p>
+</div>
+</body>
+</html>
+[0;32mI (29850) example: ... done reading from socket. Last read return=0 errno=128.[0m
+[0;32mI (29860) example: 10... [0m
+[0;32mI (30860) example: 9... [0m
+[0;32mI (31860) example: 8... [0m
+[0;32mI (32860) example: 7... [0m
+[0;32mI (33860) example: 6... [0m
+[0;32mI (34860) example: 5... [0m
+[0;32mI (35860) example: 4... [0m
+[0;32mI (36860) example: 3... [0m
+[0;32mI (37860) example: 2... [0m
+[0;32mI (38860) example: 1... [0m
+[0;32mI (39860) example: 0... [0m
+[0;32mI (40860) example: Starting again![0m
+[0;32mI (40860) example: DNS lookup succeeded. IP=93.184.215.14[0m
+[0;32mI (40860) example: ... allocated socket[0m
+[0;32mI (41080) example: ... connected[0m
+[0;32mI (41080) example: ... socket send success[0m
+[0;32mI (41080) example: ... set socket receiving timeout success[0m
+HTTP/1.0 200 OK
+Age: 231653
+Cache-Control: max-age=604800
+Content-Type: text/html; charset=UTF-8
+Date: Sun, 15 Sep 2024 11:03:18 GMT
+Etag: "3147526947+ident"
+Expires: Sun, 22 Sep 2024 11:03:18 GMT
+Last-Modified: Thu, 17 Oct 2019 07:18:26 GMT
+Server: ECAcc (dcd/7D35)
+Vary: Accept-Encoding
+X-Cache: HIT
+Content-Length: 1256
+Connection: close
+
+<!doctype html>
+<html>
+<head>
+    <title>Example Domain</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+    body {
+        background-color: #f0f0f2;
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        
+    }
+    div {
+        width: 600px;
+        margin: 5em auto;
+        padding: 2em;
+        background-color: #fdfdff;
+        border-radius: 0.5em;
+        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
+    }
+    a:link, a:visited {
+        color: #38488f;
+        text-decoration: none;
+    }
+    @media (max-width: 700px) {
+        div {
+            margin: 0 auto;
+            width: auto;
+        }
+    }
+    </style>    
+</head>
+
+<body>
+<div>
+    <h1>Example Domain</h1>
+    <p>This domain is for use in illustrative examples in documents. You may use this
+    domain in literature without prior coordination or asking for permission.</p>
+    <p><a href="https://www.iana.org/domains/example">More information...</a></p>
+</div>
+</body>
+</html>
+[0;32mI (41420) example: ... done reading from socket. Last read return=0 errno=128.[0m
+[0;32mI (41430) example: 10... [0m
+[0;32mI (42430) example: 9... [0m
+[0;32mI (43430) example: 8... [0m
+[0;32mI (44430) example: 7... [0m
+[0;32mI (45430) example: 6... [0m
+[0;32mI (46430) example: 5... [0m
+[0;32mI (47430) example: 4... [0m
+[0;32mI (48430) example: 3... [0m
+[0;32mI (49430) example: 2... [0m
+[0;32mI (50430) example: 1... [0m
+[0;32mI (51430) example: 0... [0m
+[0;32mI (52430) example: Starting again![0m
+[0;32mI (52430) example: DNS lookup succeeded. IP=93.184.215.14[0m
+[0;32mI (52430) example: ... allocated socket[0m
+[0;32mI (52650) example: ... connected[0m
+[0;32mI (52650) example: ... socket send success[0m
+[0;32mI (52660) example: ... set socket receiving timeout success[0m
+HTTP/1.0 200 OK
+Age: 277781
+Cache-Control: max-age=604800
+Content-Type: text/html; charset=UTF-8
+Date: Sun, 15 Sep 2024 11:03:30 GMT
+Etag: "3147526947+gzip+ident"
+Expires: Sun, 22 Sep 2024 11:03:30 GMT
+Last-Modified: Thu, 17 Oct 2019 07:18:26 GMT
+Server: ECAcc (dcd/7D28)
+Vary: Accept-Encoding
+X-Cache: HIT
+Content-Length: 1256
+Connection: close
+
+<!doctype html>
+<html>
+<head>
+    <title>Example Domain</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+    body {
+        background-color: #f0f0f2;
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        
+    }
+    div {
+        width: 600px;
+        margin: 5em auto;
+        padding: 2em;
+        background-color: #fdfdff;
+        border-radius: 0.5em;
+        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
+    }
+    a:link, a:visited {
+        color: #38488f;
+        text-decoration: none;
+    }
+    @media (max-width: 700px) {
+        div {
+            margin: 0 auto;
+            width: auto;
+        }
+    }
+    </style>    
+</head>
+
+<body>
+<div>
+    <h1>Example Domain</h1>
+    <p>This domain is for use in illustrative examples in documents. You may use this
+    domain in literature without prior coordination or asking for permission.</p>
+    <p><a href="https://www.iana.org/domains/example">More information...</a></p>
+</div>
+</body>
+</html>
+[0;32mI (52990) example: ... done reading from socket. Last read return=0 errno=128.[0m
+[0;32mI (53000) example: 10... [0m
+[0;32mI (54000) example: 9... [0m
+[0;32mI (55000) example: 8... [0m
+[0;32mI (56000) example: 7... [0m
+[0;32mI (57000) example: 6... [0m
+[0;32mI (58000) example: 5... [0m
+[0;32mI (59000) example: 4... [0m
+[0;32mI (60000) example: 3... [0m
+[0;32mI (61000) example: 2... [0m
+[0;32mI (62000) example: 1... [0m
+[0;32mI (63000) example: 0... [0m
+[0;32mI (64000) example: Starting again![0m
+[0;32mI (64000) example: DNS lookup succeeded. IP=93.184.215.14[0m
+[0;32mI (64000) example: ... allocated socket[0m
+[0;32mI (64230) example: ... connected[0m
+[0;32mI (64230) example: ... socket send success[0m
+[0;32mI (64230) example: ... set socket receiving timeout success[0m
+HTTP/1.0 200 OK
+Accept-Ranges: bytes
+Age: 369041
+Cache-Control: max-age=604800
+Content-Type: text/html; charset=UTF-8
+Date: Sun, 15 Sep 2024 11:03:41 GMT
+Etag: "3147526947+gzip"
+Expires: Sun, 22 Sep 2024 11:03:41 GMT
+Last-Modified: Thu, 17 Oct 2019 07:18:26 GMT
+Server: ECAcc (dcd/7D67)
+Vary: Accept-Encoding
+X-Cache: HIT
+Content-Length: 1256
+Connection: close
+
+<!doctype html>
+<html>
+<head>
+    <title>Example Domain</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+    body {
+        background-color: #f0f0f2;
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        
+    }
+    div {
+        width: 600px;
+        margin: 5em auto;
+        padding: 2em;
+        background-color: #fdfdff;
+        border-radius: 0.5em;
+        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
+    }
+    a:link, a:visited {
+        color: #38488f;
+        text-decoration: none;
+    }
+    @media (max-width: 700px) {
+        div {
+            margin: 0 auto;
+            width: auto;
+        }
+    }
+    </style>    
+</head>
+
+<body>
+<div>
+    <h1>Example Domain</h1>
+    <p>This domain is for use in illustrative examples in documents. You may use this
+    domain in literature without prior coordination or asking for permission.</p>
+    <p><a href="https://www.iana.org/domains/example">More information...</a></p>
+</div>
+</body>
+</html>
+[0;32mI (64570) example: ... done reading from socket. Last read return=0 errno=128.[0m
+[0;32mI (64580) example: 10... [0m
+[0;32mI (65580) example: 9... [0m
+[0;32mI (66580) example: 8... [0m
+[0;32mI (67580) example: 7... [0m
+[0;32mI (68580) example: 6... [0m
+[0;32mI (69580) example: 5... [0m
+[0;32mI (70580) example: 4... [0m
+[0;32mI (71580) example: 3... [0m
+[0;32mI (72580) example: 2... [0m
+[0;32mI (73580) example: 1... [0m
+[0;32mI (74580) example: 0... [0m
+[0;32mI (75580) example: Starting again![0m
+[0;32mI (75580) example: DNS lookup succeeded. IP=93.184.215.14[0m
+[0;32mI (75580) example: ... allocated socket[0m
+[0;32mI (75800) example: ... connected[0m
+[0;32mI (75800) example: ... socket send success[0m
+[0;32mI (75800) example: ... set socket receiving timeout success[0m
+HTTP/1.0 200 OK
+Age: 486326
+Cache-Control: max-age=604800
+Content-Type: text/html; charset=UTF-8
+Date: Sun, 15 Sep 2024 11:03:53 GMT
+Etag: "3147526947+ident"
+Expires: Sun, 22 Sep 2024 11:03:53 GMT
+Last-Modified: Thu, 17 Oct 2019 07:18:26 GMT
+Server: ECAcc (dcd/7D6B)
+Vary: Accept-Encoding
+X-Cache: HIT
+Content-Length: 1256
+Connection: close
+
+<!doctype html>
+<html>
+<head>
+    <title>Example Domain</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+    body {
+        background-color: #f0f0f2;
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        
+    }
+    div {
+        width: 600px;
+        margin: 5em auto;
+        padding: 2em;
+        background-color: #fdfdff;
+        border-radius: 0.5em;
+        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
+    }
+    a:link, a:visited {
+        color: #38488f;
+        text-decoration: none;
+    }
+    @media (max-width: 700px) {
+        div {
+            margin: 0 auto;
+            width: auto;
+        }
+    }
+    </style>    
+</head>
+
+<body>
+<div>
+    <h1>Example Domain</h1>
+    <p>This domain is for use in illustrative examples in documents. You may use this
+    domain in literature without prior coordination or asking for permission.</p>
+    <p><a href="https://www.iana.org/domains/example">More information...</a></p>
+</div>
+</body>
+</html>
+[0;32mI (76430) example: ... done reading from socket. Last read return=0 errno=128.[0m
+[0;32mI (76440) example: 10... [0m
+[0;32mI (77440) example: 9... [0m
+[0;32mI (78440) example: 8... [0m
+[0;32mI (79440) example: 7... [0m
+[0;32mI (80440) example: 6... [0m
+[0;32mI (81440) example: 5... [0m
+[0;32mI (82440) example: 4... [0m
+[0;32mI (83440) example: 3... [0m
+[0;32mI (84440) example: 2... [0m
+[0;32mI (85440) example: 1... [0m
+[0;32mI (86440) example: 0... [0m
+[0;32mI (87440) example: Starting again![0m
+[0;32mI (87440) example: DNS lookup succeeded. IP=93.184.215.14[0m
+[0;32mI (87440) example: ... allocated socket[0m
+[0;32mI (87670) example: ... connected[0m
+[0;32mI (87680) example: ... socket send success[0m
+[0;32mI (87680) example: ... set socket receiving timeout success[0m
+HTTP/1.0 200 OK
+Accept-Ranges: bytes
+Age: 231681
+Cache-Control: max-age=604800
+Content-Type: text/html; charset=UTF-8
+Date: Sun, 15 Sep 2024 11:04:05 GMT
+Etag: "3147526947+gzip"
+Expires: Sun, 22 Sep 2024 11:04:05 GMT
+Last-Modified: Thu, 17 Oct 2019 07:18:26 GMT
+Server: ECAcc (dcd/7D3C)
+Vary: Accept-Encoding
+X-Cache: HIT
+Content-Length: 1256
+Connection: close
+
+<!doctype html>
+<html>
+<head>
+    <title>Example Domain</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+    body {
+        background-color: #f0f0f2;
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        
+    }
+    div {
+        width: 600px;
+        margin: 5em auto;
+        padding: 2em;
+        background-color: #fdfdff;
+        border-radius: 0.5em;
+        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
+    }
+    a:link, a:visited {
+        color: #38488f;
+        text-decoration: none;
+    }
+    @media (max-width: 700px) {
+        div {
+            margin: 0 auto;
+            width: auto;
+        }
+    }
+    </style>    
+</head>
+
+<body>
+<div>
+    <h1>Example Domain</h1>
+    <p>This domain is for use in illustrative examples in documents. You may use this
+    domain in literature without prior coordination or asking for permission.</p>
+    <p><a href="https://www.iana.org/domains/example">More information...</a></p>
+</div>
+</body>
+</html>
+[0;32mI (88020) example: ... done reading from socket. Last read return=0 errno=128.[0m
+[0;32mI (88030) example: 10... [0m
+[0;32mI (89030) example: 9... [0m
+[0;32mI (90030) example: 8... [0m
+[0;32mI (91030) example: 7... [0m
+[0;32mI (92030) example: 6... [0m
+[0;32mI (93030) example: 5... [0m
+[0;32mI (94030) example: 4... [0m
+[0;32mI (95030) example: 3... [0m
+[0;32mI (96030) example: 2... [0m
+[0;32mI (97030) example: 1... [0m
+[0;32mI (98030) example: 0... [0m
+[0;32mI (99030) example: Starting again![0m
+[0;32mI (99030) example: DNS lookup succeeded. IP=93.184.215.14[0m
+[0;32mI (99030) example: ... allocated socket[0m
+[0;32mI (99240) example: ... connected[0m
+[0;32mI (99250) example: ... socket send success[0m
+[0;32mI (99250) example: ... set socket receiving timeout success[0m
+HTTP/1.0 200 OK
+Age: 216819
+Cache-Control: max-age=604800
+Content-Type: text/html; charset=UTF-8
+Date: Sun, 15 Sep 2024 11:04:16 GMT
+Etag: "3147526947+gzip+ident"
+Expires: Sun, 22 Sep 2024 11:04:16 GMT
+Last-Modified: Thu, 17 Oct 2019 07:18:26 GMT
+Server: ECAcc (dcd/7D45)
+Vary: Accept-Encoding
+X-Cache: HIT
+Content-Length: 1256
+Connection: close
+
+<!doctype html>
+<html>
+<head>
+    <title>Example Domain</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+    body {
+        background-color: #f0f0f2;
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        
+    }
+    div {
+        width: 600px;
+        margin: 5em auto;
+        padding: 2em;
+        background-color: #fdfdff;
+        border-radius: 0.5em;
+        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
+    }
+    a:link, a:visited {
+        color: #38488f;
+        text-decoration: none;
+    }
+    @media (max-width: 700px) {
+        div {
+            margin: 0 auto;
+            width: auto;
+        }
+    }
+    </style>    
+</head>
+
+<body>
+<div>
+    <h1>Example Domain</h1>
+    <p>This domain is for use in illustrative examples in documents. You may use this
+    domain in literature without prior coordination or asking for permission.</p>
+    <p><a href="https://www.iana.org/domains/example">More information...</a></p>
+</div>
+</body>
+</html>
+[0;32mI (99590) example: ... done reading from socket. Last read return=0 errno=128.[0m
+[0;32mI (99600) example: 10... [0m
+[0;32mI (100600) example: 9... [0m
+[0;32mI (101600) example: 8... [0m
+[0;32mI (102600) example: 7... [0m
+[0;32mI (103600) example: 6... [0m
+[0;32mI (104600) example: 5... [0m
+[0;32mI (105600) example: 4... [0m
+[0;32mI (106600) example: 3... [0m
+[0;32mI (107600) example: 2... [0m
+[0;32mI (108600) example: 1... [0m
+[0;32mI (109600) example: 0... [0m
+[0;32mI (110600) example: Starting again![0m
+[0;32mI (110600) example: DNS lookup succeeded. IP=93.184.215.14[0m
+[0;32mI (110600) example: ... allocated socket[0m
+[0;32mI (110910) example: ... connected[0m
+[0;32mI (110910) example: ... socket send success[0m
+[0;32mI (110910) example: ... set socket receiving timeout success[0m
+HTTP/1.0 200 OK
+Age: 277945
+Cache-Control: max-age=604800
+Content-Type: text/html; charset=UTF-8
+Date: Sun, 15 Sep 2024 11:04:28 GMT
+Etag: "3147526947+ident"
+Expires: Sun, 22 Sep 2024 11:04:28 GMT
+Last-Modified: Thu, 17 Oct 2019 07:18:26 GMT
+Server: ECAcc (dcd/7D04)
+Vary: Accept-Encoding
+X-Cache: HIT
+Content-Length: 1256
+Connection: close
+
+<!doctype html>
+<html>
+<head>
+    <title>Example Domain</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+    body {
+        background-color: #f0f0f2;
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        
+    }
+    div {
+        width: 600px;
+        margin: 5em auto;
+        padding: 2em;
+        background-color: #fdfdff;
+        border-radius: 0.5em;
+        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
+    }
+    a:link, a:visited {
+        color: #38488f;
+        text-decoration: none;
+    }
+    @media (max-width: 700px) {
+        div {
+            margin: 0 auto;
+            width: auto;
+        }
+    }
+    </style>    
+</head>
+
+<body>
+<div>
+    <h1>Example Domain</h1>
+    <p>This domain is for use in illustrative examples in documents. You may use this
+    domain in literature without prior coordination or asking for permission.</p>
+    <p><a href="https://www.iana.org/domains/example">More information...</a></p>
+</div>
+</body>
+</html>
+[0;32mI (111260) example: ... done reading from socket. Last read return=0 errno=128.[0m
+[0;32mI (111270) example: 10... [0m
+[0;32mI (112270) example: 9... [0m
+[0;32mI (113270) example: 8... [0m
+[0;32mI (114270) example: 7... [0m
+[0;32mI (115270) example: 6... [0m
+[0;32mI (116270) example: 5... [0m
+[0;32mI (117270) example: 4... [0m
+[0;32mI (118270) example: 3... [0m
+[0;32mI (119270) example: 2... [0m
+[0;32mI (120270) example: 1... [0m
+[0;32mI (121270) example: 0... [0m
+[0;32mI (122270) example: Starting again![0m
+[0;32mI (122270) example: DNS lookup succeeded. IP=93.184.215.14[0m
+[0;32mI (122270) example: ... allocated socket[0m
+[0;32mI (122500) example: ... connected[0m
+[0;32mI (122500) example: ... socket send success[0m
+[0;32mI (122500) example: ... set socket receiving timeout success[0m
+HTTP/1.0 200 OK
+Accept-Ranges: bytes
+Age: 369625
+Cache-Control: max-age=604800
+Content-Type: text/html; charset=UTF-8
+Date: Sun, 15 Sep 2024 11:04:40 GMT
+Etag: "3147526947"
+Expires: Sun, 22 Sep 2024 11:04:40 GMT
+Last-Modified: Thu, 17 Oct 2019 07:18:26 GMT
+Server: ECAcc (dcd/7D4C)
+Vary: Accept-Encoding
+X-Cache: HIT
+Content-Length: 1256
+Connection: close
+
+<!doctype html>
+<html>
+<head>
+    <title>Example Domain</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+    body {
+        background-color: #f0f0f2;
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        
+    }
+    div {
+        width: 600px;
+        margin: 5em auto;
+        padding: 2em;
+        background-color: #fdfdff;
+        border-radius: 0.5em;
+        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
+    }
+    a:link, a:visited {
+        color: #38488f;
+        text-decoration: none;
+    }
+    @media (max-width: 700px) {
+        div {
+            margin: 0 auto;
+            width: auto;
+        }
+    }
+    </style>    
+</head>
+
+<body>
+<div>
+    <h1>Example Domain</h1>
+    <p>This domain is for use in illustrative examples in documents. You may use this
+    domain in literature without prior coordination or asking for permission.</p>
+    <p><a href="https://www.iana.org/domains/example">More information...</a></p>
+</div>
+</body>
+</html>
+[0;32mI (123940) example: ... done reading from socket. Last read return=0 errno=128.[0m
+[0;32mI (123950) example: 10... [0m
+[0;32mI (124950) example: 9... [0m
+[0;32mI (125950) example: 8... [0m
+[0;32mI (126950) example: 7... [0m
+[0;32mI (127950) example: 6... [0m
+[0;32mI (128950) example: 5... [0m
+[0;32mI (129950) example: 4... [0m
+[0;32mI (130950) example: 3... [0m
+[0;32mI (131950) example: 2... [0m
+[0;32mI (132950) example: 1... [0m
+[0;32mI (133950) example: 0... [0m
+[0;32mI (134950) example: Starting again![0m
+[0;32mI (134950) example: DNS lookup succeeded. IP=93.184.215.14[0m
+[0;32mI (134950) example: ... allocated socket[0m
+[0;32mI (135190) example: ... connected[0m
+[0;32mI (135190) example: ... socket send success[0m
+[0;32mI (135190) example: ... set socket receiving timeout success[0m
+HTTP/1.0 200 OK
+Age: 231731
+Cache-Control: max-age=604800
+Content-Type: text/html; charset=UTF-8
+Date: Sun, 15 Sep 2024 11:04:52 GMT
+Etag: "3147526947+ident"
+Expires: Sun, 22 Sep 2024 11:04:52 GMT
+Last-Modified: Thu, 17 Oct 2019 07:18:26 GMT
+Server: ECAcc (dcd/7D12)
+Vary: Accept-Encoding
+X-Cache: HIT
+Content-Length: 1256
+Connection: close
+
+<!doctype html>
+<html>
+<head>
+    <title>Example Domain</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+    body {
+        background-color: #f0f0f2;
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        
+    }
+    div {
+        width: 600px;
+        margin: 5em auto;
+        padding: 2em;
+        background-color: #fdfdff;
+        border-radius: 0.5em;
+        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
+    }
+    a:link, a:visited {
+        color: #38488f;
+        text-decoration: none;
+    }
+    @media (max-width: 700px) {
+        div {
+            margin: 0 auto;
+            width: auto;
+        }
+    }
+    </style>    
+</head>
+
+<body>
+<div>
+    <h1>Example Domain</h1>
+    <p>This domain is for use in illustrative examples in documents. You may use this
+    domain in literature without prior coordination or asking for permission.</p>
+    <p><a href="https://www.iana.org/domains/example">More information...</a></p>
+</div>
+</body>
+</html>
+[0;32mI (135540) example: ... done reading from socket. Last read return=0 errno=128.[0m
+[0;32mI (135550) example: 10... [0m
+[0;32mI (136550) example: 9... [0m
+[0;32mI (137550) example: 8... [0m
+[0;32mI (138550) example: 7... [0m
+[0;32mI (139550) example: 6... [0m
+[0;32mI (140550) example: 5... [0m
+[0;32mI (141550) example: 4... [0m
+[0;32mI (142550) example: 3... [0m
+[0;32mI (143550) example: 2... [0m
+[0;32mI (144550) example: 1... [0m
+[0;32mI (145550) example: 0... [0m
+[0;32mI (146550) example: Starting again![0m
+[0;32mI (146550) example: DNS lookup succeeded. IP=93.184.215.14[0m
+[0;32mI (146550) example: ... allocated socket[0m
+[0;32mI (146800) example: ... connected[0m
+[0;32mI (146800) example: ... socket send success[0m
+[0;32mI (146800) example: ... set socket receiving timeout success[0m
+HTTP/1.0 200 OK
+Age: 486397
+Cache-Control: max-age=604800
+Content-Type: text/html; charset=UTF-8
+Date: Sun, 15 Sep 2024 11:05:04 GMT
+Etag: "3147526947+ident"
+Expires: Sun, 22 Sep 2024 11:05:04 GMT
+Last-Modified: Thu, 17 Oct 2019 07:18:26 GMT
+Server: ECAcc (dcd/7D6B)
+Vary: Accept-Encoding
+X-Cache: HIT
+Content-Length: 1256
+Connection: close
+
+<!doctype html>
+<html>
+<head>
+    <title>Example Domain</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+    body {
+        background-color: #f0f0f2;
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        
+    }
+    div {
+        width: 600px;
+        margin: 5em auto;
+        padding: 2em;
+        background-color: #fdfdff;
+        border-radius: 0.5em;
+        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
+    }
+    a:link, a:visited {
+        color: #38488f;
+        text-decoration: none;
+    }
+    @media (max-width: 700px) {
+        div {
+            margin: 0 auto;
+            width: auto;
+        }
+    }
+    </style>    
+</head>
+
+<body>
+<div>
+    <h1>Example Domain</h1>
+    <p>This domain is for use in illustrative examples in documents. You may use this
+    domain in literature without prior coordination or asking for permission.</p>
+    <p><a href="https://www.iana.org/domains/example">More information...</a></p>
+</div>
+</body>
+</html>
+[0;32mI (147100) example: ... done reading from socket. Last read return=0 errno=128.[0m
+[0;32mI (147110) example: 10... [0m
+[0;32mI (148110) example: 9... [0m
+[0;32mI (149110) example: 8... [0m
+[0;32mI (150110) example: 7... [0m
+[0;32mI (151110) example: 6... [0m
+[0;32mI (152110) example: 5... [0m
+[0;32mI (153110) example: 4... [0m
+[0;32mI (154110) example: 3... [0m
+[0;32mI (155110) example: 2... [0m
+[0;32mI (156110) example: 1... [0m
+[0;32mI (157110) example: 0... [0m
+[0;32mI (158110) example: Starting again![0m
+[0;32mI (158110) example: DNS lookup succeeded. IP=93.184.215.14[0m
+[0;32mI (158110) example: ... allocated socket[0m
+[0;32mI (159660) example: ... connected[0m
+[0;32mI (159660) example: ... socket send success[0m
+[0;32mI (159660) example: ... set socket receiving timeout success[0m
+HTTP/1.0 200 OK
+Age: 231712
+Cache-Control: max-age=604800
+Content-Type: text/html; charset=UTF-8
+Date: Sun, 15 Sep 2024 11:05:17 GMT
+Etag: "3147526947+ident"
+Expires: Sun, 22 Sep 2024 11:05:17 GMT
+Last-Modified: Thu, 17 Oct 2019 07:18:26 GMT
+Server: ECAcc (dcd/7D29)
+Vary: Accept-Encoding
+X-Cache: HIT
+Content-Length: 1256
+Connection: close
+
+<!doctype html>
+<html>
+<head>
+    <title>Example Domain</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+    body {
+        background-color: #f0f0f2;
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        
+    }
+    div {
+        width: 600px;
+        margin: 5em auto;
+        padding: 2em;
+        background-color: #fdfdff;
+        border-radius: 0.5em;
+        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
+    }
+    a:link, a:visited {
+        color: #38488f;
+        text-decoration: none;
+    }
+    @media (max-width: 700px) {
+        div {
+            margin: 0 auto;
+            width: auto;
+        }
+    }
+    </style>    
+</head>
+
+<body>
+<div>
+    <h1>Example Domain</h1>
+    <p>This domain is for use in illustrative examples in documents. You may use this
+    domain in literature without prior coordination or asking for permission.</p>
+    <p><a href="https://www.iana.org/domains/example">More information...</a></p>
+</div>
+</body>
+</html>
+[0;32mI (160000) example: ... done reading from socket. Last read return=0 errno=128.[0m
+[0;32mI (160010) example: 10... [0m
+[0;32mI (161020) example: 9... [0m
+[0;32mI (162020) example: 8... [0m
+[0;32mI (163020) example: 7... [0m
+[0;32mI (164020) example: 6... [0m
+[0;32mI (165020) example: 5... [0m
+[0;32mI (166020) example: 4... [0m
+[0;32mI (167020) example: 3... [0m
+[0;32mI (168020) example: 2... [0m
+[0;32mI (169020) example: 1... [0m
+[0;32mI (170020) example: 0... [0m
+[0;32mI (171020) example: Starting again![0m
+[0;32mI (171020) example: DNS lookup succeeded. IP=93.184.215.14[0m
+[0;32mI (171020) example: ... allocated socket[0m
+[0;32mI (171240) example: ... connected[0m
+[0;32mI (171240) example: ... socket send success[0m
+[0;32mI (171240) example: ... set socket receiving timeout success[0m
+HTTP/1.0 200 OK
+Age: 231758
+Cache-Control: max-age=604800
+Content-Type: text/html; charset=UTF-8
+Date: Sun, 15 Sep 2024 11:05:28 GMT
+Etag: "3147526947+ident"
+Expires: Sun, 22 Sep 2024 11:05:28 GMT
+Last-Modified: Thu, 17 Oct 2019 07:18:26 GMT
+Server: ECAcc (dcd/7D70)
+Vary: Accept-Encoding
+X-Cache: HIT
+Content-Length: 1256
+Connection: close
+
+<!doctype html>
+<html>
+<head>
+    <title>Example Domain</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+    body {
+        background-color: #f0f0f2;
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        
+    }
+    div {
+        width: 600px;
+        margin: 5em auto;
+        padding: 2em;
+        background-color: #fdfdff;
+        border-radius: 0.5em;
+        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
+    }
+    a:link, a:visited {
+        color: #38488f;
+        text-decoration: none;
+    }
+    @media (max-width: 700px) {
+        div {
+            margin: 0 auto;
+            width: auto;
+        }
+    }
+    </style>    
+</head>
+
+<body>
+<div>
+    <h1>Example Domain</h1>
+    <p>This domain is for use in illustrative examples in documents. You may use this
+    domain in literature without prior coordination or asking for permission.</p>
+    <p><a href="https://www.iana.org/domains/example">More information...</a></p>
+</div>
+</body>
+</html>
+[0;32mI (171580) example: ... done reading from socket. Last read return=0 errno=128.[0m
+[0;32mI (171590) example: 10... [0m
+[0;32mI (172590) example: 9... [0m
+[0;32mI (173590) example: 8... [0m
+[0;32mI (174590) example: 7... [0m
+[0;32mI (175590) example: 6... [0m
+[0;32mI (176590) example: 5... [0m
+[0;32mI (177590) example: 4... [0m
+[0;32mI (178590) example: 3... [0m
+[0;32mI (179590) example: 2... [0m
+[0;32mI (180590) example: 1... [0m
+[0;32mI (181590) example: 0... [0m
+[0;32mI (182590) example: Starting again![0m
+[0;32mI (182590) example: DNS lookup succeeded. IP=93.184.215.14[0m
+[0;32mI (182590) example: ... allocated socket[0m
+[0;32mI (182900) example: ... connected[0m
+[0;32mI (182900) example: ... socket send success[0m
+[0;32mI (182900) example: ... set socket receiving timeout success[0m
+HTTP/1.0 200 OK
+Age: 375727
+Cache-Control: max-age=604800
+Content-Type: text/html; charset=UTF-8
+Date: Sun, 15 Sep 2024 11:05:40 GMT
+Etag: "3147526947+ident"
+Expires: Sun, 22 Sep 2024 11:05:40 GMT
+Last-Modified: Thu, 17 Oct 2019 07:18:26 GMT
+Server: ECAcc (dcd/7D13)
+Vary: Accept-Encoding
+X-Cache: HIT
+Content-Length: 1256
+Connection: close
+
+<!doctype html>
+<html>
+<head>
+    <title>Example Domain</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+    body {
+        background-color: #f0f0f2;
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        
+    }
+    div {
+        width: 600px;
+        margin: 5em auto;
+        padding: 2em;
+        background-color: #fdfdff;
+        border-radius: 0.5em;
+        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
+    }
+    a:link, a:visited {
+        color: #38488f;
+        text-decoration: none;
+    }
+    @media (max-width: 700px) {
+        div {
+            margin: 0 auto;
+            width: auto;
+        }
+    }
+    </style>    
+</head>
+
+<body>
+<div>
+    <h1>Example Domain</h1>
+    <p>This domain is for use in illustrative examples in documents. You may use this
+    domain in literature without prior coordination or asking for permission.</p>
+    <p><a href="https://www.iana.org/domains/example">More information...</a></p>
+</div>
+</body>
+</html>
+[0;32mI (183250) example: ... done reading from socket. Last read return=0 errno=128.[0m
+[0;32mI (183260) example: 10... [0m
+[0;32mI (184260) example: 9... [0m
+[0;32mI (185260) example: 8... [0m
+[0;32mI (186260) example: 7... [0m
+[0;32mI (187260) example: 6... [0m
+[0;32mI (188260) example: 5... [0m
+[0;32mI (189260) example: 4... [0m
+[0;32mI (190260) example: 3... [0m
+[0;32mI (191260) example: 2... [0m
+[0;32mI (192260) example: 1... [0m
+[0;32mI (193260) example: 0... [0m
+[0;32mI (194260) example: Starting again![0m
+[0;32mI (194260) example: DNS lookup succeeded. IP=93.184.215.14[0m
+[0;32mI (194260) example: ... allocated socket[0m
+[0;32mI (195800) example: ... connected[0m
+[0;32mI (195800) example: ... socket send success[0m
+[0;32mI (195800) example: ... set socket receiving timeout success[0m
+HTTP/1.0 200 OK
+Accept-Ranges: bytes
+Age: 279131
+Cache-Control: max-age=604800
+Content-Type: text/html; charset=UTF-8
+Date: Sun, 15 Sep 2024 11:05:53 GMT
+Etag: "3147526947"
+Expires: Sun, 22 Sep 2024 11:05:53 GMT
+Last-Modified: Thu, 17 Oct 2019 07:18:26 GMT
+Server: ECAcc (dcd/7D2C)
+Vary: Accept-Encoding
+X-Cache: HIT
+Content-Length: 1256
+Connection: close
+
+<!doctype html>
+<html>
+<head>
+    <title>Example Domain</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+    body {
+        background-color: #f0f0f2;
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        
+    }
+    div {
+        width: 600px;
+        margin: 5em auto;
+        padding: 2em;
+        background-color: #fdfdff;
+        border-radius: 0.5em;
+        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
+    }
+    a:link, a:visited {
+        color: #38488f;
+        text-decoration: none;
+    }
+    @media (max-width: 700px) {
+        div {
+            margin: 0 auto;
+            width: auto;
+        }
+    }
+    </style>    
+</head>
+
+<body>
+<div>
+    <h1>Example Domain</h1>
+    <p>This domain is for use in illustrative examples in documents. You may use this
+    domain in literature without prior coordination or asking for permission.</p>
+    <p><a href="https://www.iana.org/domains/example">More information...</a></p>
+</div>
+</body>
+</html>
+[0;32mI (196180) example: ... done reading from socket. Last read return=0 errno=128.[0m
+[0;32mI (196190) example: 10... [0m
+[0;32mI (197190) example: 9... [0m
+[0;32mI (198190) example: 8... [0m
+[0;32mI (199190) example: 7... [0m
+[0;32mI (200190) example: 6... [0m
+[0;32mI (201190) example: 5... [0m
+[0;32mI (202190) example: 4... [0m
